@@ -13,8 +13,9 @@ export function updateTaskList(tasks) {
                 <button class="edit-btn" onclick="editTask('${task.id}')">
                     <i class="fas fa-edit"></i>
                 </button>
-                <button class="delete-btn" onclick="deleteTask('${task.id}')">
-                    <i class="fas fa-trash"></i>
+                <button class="delete-btn" onclick="confirmDelete('${task.id}')">
+    <i class="fas fa-trash"></i>
+</button>
                 </button>
             </div>
         </li>

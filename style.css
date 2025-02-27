@@ -220,3 +220,12 @@ body {
         width: 60%;
     }
 }
+/* Style the browser's default confirm dialog */
+/* Note: Native confirm dialogs can't be styled, but this affects text */
+@media screen and (min-width: 768px) {
+    dialog {
+        padding: 20px;
+        border-radius: 8px;
+        border: 1px solid #af7deb;
+    }
+}

@@ -53,7 +53,7 @@ window.toggleTaskCompletion = (taskId) => {
     updateTaskList(taskManager.getTasks());
 };
 
-window.deleteTask = (taskId) => {
+window.deleteTask = function(taskId) {
     taskManager.deleteTask(taskId);
     updateTaskList(taskManager.getTasks());
 };
@@ -66,5 +66,12 @@ window.editTask = (taskId) => {
     if (newTitle && newDate) {
         taskManager.editTask(taskId, { title: newTitle, dueDate: newDate });
         updateTaskList(taskManager.getTasks());
+    }
+};
+// Add confirmation dialog handler
+window.confirmDelete = function(taskId) {
+    const isConfirmed = confirm("❗ This will permanently delete the task. Continue??");
+    if (isConfirmed) {
+        deleteTask(taskId);
     }
 };
